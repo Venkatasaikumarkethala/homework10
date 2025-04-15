@@ -182,12 +182,15 @@ async def list_users(
     
     # Construct the final response with pagination details
     return UserListResponse(
-        items=user_responses,
-        total=total_users,
-        page=skip // limit + 1,
-        size=len(user_responses),
-        links=pagination_links  # Ensure you have appropriate logic to create these links
+    items=user_responses,
+    pagination=EnhancedPagination(
+        currentPage=skip // limit + 1,
+        totalPages=(total_users + limit - 1) // limit,
+        totalItems=total_users,
+        links=pagination_links
     )
+)
+
 
 
 @router.post("/register/", response_model=UserResponse, tags=["Login and Registration"])
