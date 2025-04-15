@@ -1,4 +1,5 @@
 from builtins import ValueError, any, bool, str
+from urllib.parse import urlparse
 from pydantic import BaseModel, EmailStr, Field, validator, root_validator
 from typing import Optional, List
 from datetime import datetime
@@ -56,6 +57,15 @@ class UserUpdate(UserBase):
         if not any(values.values()):
             raise ValueError("At least one field must be provided for update")
         return values
+    
+    @validator('profile_picture_url', pre=True, always=True)
+    def validate_profile_picture_url(cls, value):
+        if value is None:
+            return value  # If the URL is optional, allow None values
+        parsed_url = urlparse(value)
+        if not re.search(r"\.(jpg|jpeg|png)$", parsed_url.path):
+            raise ValueError("Should have a valid image file (e.g., .jpg, .jpeg, .png)")
+        return value
 
 class UserResponse(UserBase):
     id: uuid.UUID = Field(..., example=uuid.uuid4())
