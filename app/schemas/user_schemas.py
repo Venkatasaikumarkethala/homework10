@@ -12,12 +12,11 @@ class UserBase(BaseModel):
     username: str = Field(..., min_length=3, max_length=50)
     email: EmailStr
     full_name: Optional[str] = None
-    first_name: Optional[str] = None  # ✅ Add this
-    bio: Optional[str] = None
+    first_name: Optional[str] = None  
     profile_picture_url: Optional[str] = None
-    nickname: Optional[str] = None  # ✅ Add this
-    github_profile_url: Optional[HttpUrl] = None  # ✅ Add this
-    linkedin_profile_url: Optional[HttpUrl] = None  # ✅ Add this
+    nickname: Optional[str] = None 
+    github_profile_url: Optional[HttpUrl] = None 
+    linkedin_profile_url: Optional[HttpUrl] = None  
 
     @validator('username')
     def validate_username(cls, v):
@@ -66,12 +65,12 @@ class UserCreate(UserBase):
 class UserUpdate(BaseModel):
     email: Optional[EmailStr] = None
     full_name: Optional[str] = None
-    first_name: Optional[str] = None  # ✅ Add this
+    first_name: Optional[str] = None  
     bio: Optional[str] = None
     profile_picture_url: Optional[HttpUrl] = None
-    nickname: Optional[str] = None  # ✅ Add this
-    github_profile_url: Optional[HttpUrl] = None  # ✅ Add this
-    linkedin_profile_url: Optional[HttpUrl] = None  # ✅ Add this
+    nickname: Optional[str] = None  
+    github_profile_url: Optional[HttpUrl] = None  
+    linkedin_profile_url: Optional[HttpUrl] = None  
 
     @validator('profile_picture_url', pre=True, always=True)
     def validate_profile_picture_url(cls, v):
@@ -83,7 +82,7 @@ class UserUpdate(BaseModel):
 
 
 class UserResponse(UserBase):
-    id: UUID  # ✅ Use UUID to match DB
+    id: UUID  
     last_login_at: Optional[datetime] = None
     created_at: datetime
     updated_at: datetime
@@ -101,7 +100,7 @@ class UserListResponse(BaseModel):
 
 class LoginRequest(BaseModel):
     username: Optional[str] = None
-    email: Optional[EmailStr] = None  # ✅ Add this
+    email: Optional[EmailStr] = None
     password: str
 
 
