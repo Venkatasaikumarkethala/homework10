@@ -1,7 +1,10 @@
-from pydantic import BaseModel, Field, HttpUrl
-from typing import List
+import re
+from datetime import datetime
+from typing import List, Optional
+from uuid import UUID
+from pydantic import BaseModel, EmailStr, Field, HttpUrl, validator, conint
 
-
+# Pagination Model
 class Pagination(BaseModel):
     page: int = Field(..., description="Current page number.")
     per_page: int = Field(..., description="Number of items per page.")
@@ -19,11 +22,11 @@ class Pagination(BaseModel):
         }
 
 
+
 class PaginationLink(BaseModel):
     rel: str
     href: HttpUrl
     method: str = "GET"
-
 
 class EnhancedPagination(Pagination):
     links: List[PaginationLink] = []

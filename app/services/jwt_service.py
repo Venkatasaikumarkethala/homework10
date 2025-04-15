@@ -1,6 +1,6 @@
 # app/services/jwt_service.py
 from builtins import dict, str
-from jose import jwt
+import jwt
 from datetime import datetime, timedelta
 from settings.config import settings
 
