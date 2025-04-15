@@ -29,15 +29,17 @@ The application passed all test cases and achieved **94% test coverage**.
 
 I identified, resolved, and documented 7 issues. Each issue includes code changes and test cases.
 
+## Issues Addressed ✅
+
 | # | Issue Title | Status | Issue Link |
 |---|-------------|--------|------------|
-| 1 | [Failing tests due to missing token fixtures and email service disconnection](https://github.com/Venkatasaikumarkethala/homework10/issues/1) | ✅ Closed |
-| 2 | [Critical and High Trivy vulnerabilities in dependencies](https://github.com/Venkatasaikumarkethala/homework10/issues/3) | ✅ Closed |
-| 3 | [Username validation allows invalid characters or lengths](https://github.com/Venkatasaikumarkethala/homework10/issues/5) | ✅ Closed |
-| 4 | [user_schema – Validation and Type Issues Causing Test Failures](https://github.com/Venkatasaikumarkethala/homework10/issues/7) | ✅ Closed |
-| 5 | [Validation Failures and Schema Mismatches in UserCreate, UserResponse, and Related Tests](https://github.com/Venkatasaikumarkethala/homework10/issues/9) | ✅ Closed |
-| 6 | [Profile picture URL should end with valid image format](https://github.com/Venkatasaikumarkethala/homework10/issues/13) | ✅ Closed |
-| 7 | [Password Validation](https://github.com/Venkatasaikumarkethala/homework10/issues/15) | ✅ Closed |
+| 1 | Failing tests due to missing token fixtures and email service disconnection | ✅ Closed | [#1](https://github.com/Venkatasaikumarkethala/homework10/issues/1) |
+| 2 | Critical and High Trivy vulnerabilities in dependencies | ✅ Closed | [#3](https://github.com/Venkatasaikumarkethala/homework10/issues/3) |
+| 3 | Username validation allows invalid characters or lengths | ✅ Closed | [#5](https://github.com/Venkatasaikumarkethala/homework10/issues/5) |
+| 4 | user_schema – Validation and Type Issues Causing Test Failures | ✅ Closed | [#7](https://github.com/Venkatasaikumarkethala/homework10/issues/7) |
+| 5 | Validation Failures and Schema Mismatches in UserCreate, UserResponse, and Related Tests | ✅ Closed | [#9](https://github.com/Venkatasaikumarkethala/homework10/issues/9) |
+| 6 | Profile picture URL should end with valid image format | ✅ Closed | [#13](https://github.com/Venkatasaikumarkethala/homework10/issues/13) |
+| 7 | Password Validation | ✅ Closed | [#15](https://github.com/Venkatasaikumarkethala/homework10/issues/15) |
 
 ---
 
