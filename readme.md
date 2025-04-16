@@ -17,7 +17,7 @@ Welcome to my submission for the Event Manager Company onboarding assignment as 
 
 ## ✅ Test Results
 
-The application passed all test cases and achieved **94% test coverage**.
+The application passed all test cases and achieved **92% test coverage**.
 
 ### ✅ All Tests Passing
 ![Test Success 1](images/tests.png)
@@ -40,6 +40,7 @@ I identified, resolved, and documented 7 issues. Each issue includes code change
 | 5 | Validation Failures and Schema Mismatches in UserCreate, UserResponse, and Related Tests | ✅ Closed | [#9](https://github.com/Venkatasaikumarkethala/homework10/issues/9) |
 | 6 | Profile picture URL should end with valid image format | ✅ Closed | [#13](https://github.com/Venkatasaikumarkethala/homework10/issues/13) |
 | 7 | Password Validation | ✅ Closed | [#15](https://github.com/Venkatasaikumarkethala/homework10/issues/15) |
+| 8 | Profile Field Edge Cases: Bio & Profile Picture Updates Failing or Inconsistent | ✅ Closed | [#17](https://github.com/Venkatasaikumarkethala/homework10/issues/17) |
 
 ---
 
