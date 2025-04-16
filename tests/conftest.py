@@ -15,7 +15,7 @@ Fixtures:
 
 # Standard library imports
 from builtins import range
-from datetime import datetime
+from datetime import datetime, timedelta
 from unittest.mock import patch
 from uuid import uuid4
 
@@ -267,3 +267,11 @@ def user_response_data():
 @pytest.fixture
 def login_request_data():
     return {"email": "john.doe.example.com", "password": "SecurePassword123!"}
+
+@pytest.fixture
+def admin_token(admin_user):
+    access_token_expires = timedelta(minutes=settings.access_token_expire_minutes)
+    return create_access_token(
+        data={"sub": admin_user.email, "role": "ADMIN"},
+        expires_delta=access_token_expires
+    )
